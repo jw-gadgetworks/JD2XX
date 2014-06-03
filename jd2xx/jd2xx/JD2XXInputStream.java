@@ -66,4 +66,9 @@ public class JD2XXInputStream extends InputStream {
 	public int read(byte[] b) throws IOException {
 		return jd2xx.read(b);
 	}
+
+	public int available() throws IOException {
+		return jd2xx.getQueueStatus();
+	}
+
 }
